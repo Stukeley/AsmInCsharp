@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AsmInCsharp.CS": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
