@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 	<Grid>
-		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
-			<TextBlock Text="x = 1, y = 2" FontSize="16" Margin="10" HorizontalAlignment="Center"/>
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+			<TextBlock x:Name="ExpectedValueBlock" Text="Expected value is:" FontSize="16" Margin="10" HorizontalAlignment="Center" TextAlignment="Center"/>
 			
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 				<Button x:Name="RunAsmButton" Content="ASM" FontSize="16" Margin="5" Click="RunAsmButton_Click"/> 

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace AsmInCsharp.CS
 {
@@ -7,6 +8,11 @@ namespace AsmInCsharp.CS
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			long expectedDataDec = Convert.ToInt64("0123456789abcdef", 16);
+			string expectedDataString = expectedDataDec.ToString();
+
+			ExpectedValueBlock.Text += $"\n{expectedDataString}";
 		}
 
 		private void RunAsmButton_Click(object sender, RoutedEventArgs e)
@@ -15,10 +21,9 @@ namespace AsmInCsharp.CS
 
 			Algorithms.Example(data);
 
-			string newDataString = data[0].ToString();
+			string actualValueString = data[0].ToString();
 
-
-			ResultBlock.Text = $"newDataString = {newDataString}";
+			ResultBlock.Text = $"actualValueString = {actualValueString}";
 		}
 	}
 }
